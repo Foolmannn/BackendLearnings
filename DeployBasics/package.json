@@ -1,0 +1,17 @@
+{
+  "name": "deploybasics",
+  "version": "1.0.0",
+  "description": "a basic app to deploy",
+  "license": "ISC",
+  "author": "Suman Magar",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^4.22.1"
+  }
+}
