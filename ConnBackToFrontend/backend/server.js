@@ -1,5 +1,8 @@
 import express from "express";
 const app = express();
+// to use the .env we need 
+import dotenv from "dotenv";
+dotenv.config();
 
 app.get("/", (req, res) => {
   res.send("server is ready");
@@ -44,8 +47,9 @@ app.get("/jokes", (req, res) => {
   res.send(jokes);
 });
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3000 ;
 
+// This or 3000 is to avoid the breaking of the app due to the  misconfiguration of the env 
 app.listen(port, () => {
   console.log(`Server running at http://localhost:${port}`);
 });
