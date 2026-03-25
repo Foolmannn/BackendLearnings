@@ -28,7 +28,7 @@ Used when values are part of the URL.
 
 ```js
 app.get("/user/:id", (req, res) => {
-  console.log(req.params.id);
+  console.log(req.params.id); 
 });
 ```
 
