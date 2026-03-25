@@ -4,9 +4,14 @@ const app = express();
 import dotenv from "dotenv";
 dotenv.config();
 
-app.get("/", (req, res) => {
-  res.send("server is ready");
-});
+
+app.use(express.static('dist')); // this dist folder from the frontend is the static files which can be served using the middleware but It is the bad practices as the changes in the backend is propagated but the any change is frontend is not propagated . So we have rebuild the fronted after the changes in frontend . then again the folders must be replaced with new
+
+// app.get("/", (req, res) => {
+//   res.send("server is ready");
+// });
+
+
 
 
 ///api/jokes is the standard way of the writing the routes 
