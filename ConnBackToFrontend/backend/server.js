@@ -8,7 +8,9 @@ app.get("/", (req, res) => {
   res.send("server is ready");
 });
 
-app.get("/jokes", (req, res) => {
+
+///api/jokes is the standard way of the writing the routes 
+app.get("/api/jokes", (req, res) => {
   const jokes = [
     {
       id: 1,
