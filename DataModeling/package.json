@@ -1,0 +1,17 @@
+{
+  "name": "datamodeling",
+  "version": "1.0.0",
+  "description": "Data modeling is the process of **designing and structuring data** so it can be stored, organized, and used efficiently in systems like databases, applications, and analytics platforms. It defines **what data is needed, how it is related, and how it should be stored and accessed**.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "express": "^4.22.1",
+    "mongoose": "^9.3.3"
+  }
+}
