@@ -1,11 +1,25 @@
+// require('dotenv').config({path: './env'})
+// or we can do as below instead of the require syntax
+import dotenv from "dotenv"
+
+dotenv.config(
+    {
+        path:"./env"
+    }
+)
+
+
 //While connecting to the db we must use the error handling and the async await as it may take some time . Always think that the DB is stored in Another continent
 
 import mongoose from "mongoose";
-import env from "dotenv";
-import { DB_NAME } from "./constants";
+import { DB_NAME } from "./constants.js";
 import express from "express"
 
+import connectDB from "./db/index.js";
+
 const app = express()
+
+connectDB()
 
 
 /* function connectDB(){}
@@ -20,6 +34,11 @@ connectDB()
 
 
 /*
+
+mongoose.connect('mongodb://127.0.0.1:27017/test');
+//here it is for local host . We have to replace the ip to the string of the db from the atlas
+
+this
 ;(async () => {
     try{
        await mongoose.connect(`${process.env.MONGOBD_URI}/${DB_NAME}`)
