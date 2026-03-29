@@ -16,6 +16,7 @@ import { DB_NAME } from "./constants.js";
 import express from "express"
 
 import connectDB from "./db/index.js";
+//try to add the whole path with the extension as it causes the error 
 
 const app = express()
 

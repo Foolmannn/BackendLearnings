@@ -13,3 +13,8 @@ https://github.com/hiteshchoudhary/chai-backend
 
 
 ### While connecting to the db we must use the error handling and the async await as it may take some time 
+
+# Try to avoid using the special charater in the mongodb uri as the name and password with the special charater might cause some issue
+
+
+
