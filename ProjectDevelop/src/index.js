@@ -1,6 +1,5 @@
 import mongoose from "mongoose";
 import { DB_NAME } from "./constants.js";
-import express from "express";
 
 import connectDB from "./db/index.js";
 //try to add the whole path with the extension as it causes the error
@@ -24,13 +23,21 @@ connectDB()
     console.log("Mongo db connection failed !!!", err);
   });
 
-//While connecting to the db we must use the error handling and the async await as it may take some time . Always think that the DB is stored in Another continent
 
-/* function connectDB(){}
+
+
+  import { app } from "./app.js"; //importing the app from the app.js file
+
+
+
+/*
+
+//While connecting to the db we must use the error handling and the async await as it may take some time . Always think that the DB is stored in Another continent
+ function connectDB(){}
 
 connectDB()
 
-*/
+
 //this is not the best approach
 
 //here this is IFFE ()() and the  ; is used to avoid the issue due to previous code . ie it clears the previous code executions
@@ -58,5 +65,6 @@ this
     }
 })()
 
-*/
 // this approach is not best approach as the both db and express are in single file it congests the file
+
+*/
