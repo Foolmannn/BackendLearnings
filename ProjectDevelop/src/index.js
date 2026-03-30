@@ -1,38 +1,39 @@
-// require('dotenv').config({path: './env'})
-// or we can do as below instead of the require syntax
-import dotenv from "dotenv"
-
-dotenv.config(
-    {
-        path:"./env"
-    }
-)
-
-
-//While connecting to the db we must use the error handling and the async await as it may take some time . Always think that the DB is stored in Another continent
-
 import mongoose from "mongoose";
 import { DB_NAME } from "./constants.js";
-import express from "express"
+import express from "express";
 
 import connectDB from "./db/index.js";
-//try to add the whole path with the extension as it causes the error 
+//try to add the whole path with the extension as it causes the error
 
-const app = express()
+// require('dotenv').config({path: './env'})
+
+// or we can do as below instead of the require syntax
+import dotenv from "dotenv";
+
+dotenv.config({
+  path: "./env",
+});
 
 connectDB()
+  .then(() => {
+    app.listen(process.env.PORT || 8000, () => {
+      console.log(`Server is running at port: ${process.env.PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.log("Mongo db connection failed !!!", err);
+  });
 
+//While connecting to the db we must use the error handling and the async await as it may take some time . Always think that the DB is stored in Another continent
 
 /* function connectDB(){}
 
 connectDB()
 
 */
-//this is the not the best approach
-
+//this is not the best approach
 
 //here this is IFFE ()() and the  ; is used to avoid the issue due to previous code . ie it clears the previous code executions
-
 
 /*
 
@@ -58,4 +59,4 @@ this
 })()
 
 */
-// this approach is not best approach as the both db and express are in single file it congests the file 
+// this approach is not best approach as the both db and express are in single file it congests the file
