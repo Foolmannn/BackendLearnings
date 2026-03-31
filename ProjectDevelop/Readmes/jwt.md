@@ -1,5 +1,10 @@
 JWT (**JSON Web Token**) is the backbone of modern authentication systems—especially in APIs (like your Express + MongoDB setup).
 
+
+https://www.jwt.io/
+
+https://github.com/auth0/node-jsonwebtoken
+
 ---
 
 # 🔐 What is JWT?

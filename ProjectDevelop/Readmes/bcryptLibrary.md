@@ -1,5 +1,8 @@
 **`bcrypt`** is one of the most widely used libraries for **secure password hashing** in backend development (especially in Node.js, Python, etc.). If you're building authentication (like in your Express/MongoDB project), this is *essential*.
 
+
+https://www.npmjs.com/package/bcrypt
+
 ---
 
 # 🔐 What is `bcrypt`?

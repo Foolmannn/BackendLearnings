@@ -7,6 +7,8 @@ They’re extremely useful for things like:
 * Validation
 * Auto-updating fields
 
+https://mongoosejs.com/docs/middleware.html
+
 ---
 
 # 🧠 What are Mongoose Middlewares?

@@ -2,6 +2,9 @@
 
 👉 If you're using MongoDB aggregation (`$match`, `$lookup`, `$group`, etc.), this plugin is 🔥 useful.
 
+
+https://www.npmjs.com/package/mongoose-aggregate-paginate-v2
+
 ---
 
 # 🧠 What problem does it solve?

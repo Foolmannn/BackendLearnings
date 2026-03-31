@@ -1,17 +1,18 @@
-import mongoose from "mongoose";
-import { DB_NAME } from "./constants.js";
-
-import connectDB from "./db/index.js";
-//try to add the whole path with the extension as it causes the error
-
 // require('dotenv').config({path: './env'})
 
 // or we can do as below instead of the require syntax
 import dotenv from "dotenv";
 
 dotenv.config({
-  path: "./env",
+  path: "./.env",
 });
+
+import mongoose from "mongoose";
+import { DB_NAME } from "./constants.js";
+
+import connectDB from "./db/index.js";
+//try to add the whole path with the extension as it causes the error
+
 
 connectDB()
   .then(() => {
