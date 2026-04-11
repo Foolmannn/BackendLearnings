@@ -24,7 +24,7 @@ app.use(cookieParser())
 
 //routes import
 
-import userRouter from "./routes/user.route.js"
+import userRouter from "./routes/user.route.js" // this only works when we are exporting as default 
 
 
 
